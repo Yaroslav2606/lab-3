@@ -1,27 +1,30 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div class="app">
+    <main class="flex-fill">
+      <Header />
+      <router-view />
+    </main>
   </div>
 </template>
 
+<script>
+import Header from "@/components/Header.vue";
 
+export default {
+  components: {
+    Header,
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 <style>
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
-  /*https://joinposter.com/i/site/blog/music_cafe2a.jpg */
+.flex-fill {
+  margin: 10px 250px 50px 250px;
 }
-.admin{
-  float: right;
-  margin: 0;
-  padding:0;
-  background: #2c3e50;
-  text-decoration: none;
-  color:aliceblue;
-  border-radius: 15%;
-}
+.app{
+  height: 100vh;
+  
+  }
 </style>
